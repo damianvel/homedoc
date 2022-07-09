@@ -1,0 +1,719 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas:
+        "menu menu menu"
+        "lateral principal secundario"
+        "pie pie pie";
+
+    grid-template-columns: 10% auto 10%;
+    grid-template-rows: 13% 60rem 16%;
+    column-gap: 0.2rem;
+    row-gap: 0.3rem;
+}
+
+header {
+    background-image: linear-gradient(rgb(201, 215, 216), rgb(70, 130, 128));
+    grid-area: menu;
+    border-bottom: solid rgb(188, 168, 125)
+}
+
+aside {
+    background-image: linear-gradient(to right, rgb(176, 205, 207), rgb(70, 130, 128));
+    grid-area: lateral;
+}
+
+main {
+    grid-area: principal;
+}
+
+section {
+    background-image: linear-gradient(to left, rgb(176, 205, 207), rgb(70, 130, 128));
+    grid-area: secundario;
+}
+
+footer {
+    grid-area: pie;
+    background-image: linear-gradient(rgb(201, 215, 216), rgb(70, 130, 128));
+    ;
+}
+
+
+.headerbox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0.5rem;
+    margin-right: 2rem;
+}
+
+.nombre {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    border-top: solid white;
+}
+
+
+.menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+
+}
+
+.menu div li a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+
+
+.menuelem {
+    padding: 0.2rem 1rem 0rem;
+    border-right: solid rgb(197, 187, 167);
+}
+
+
+
+.iconos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 7rem;
+}
+
+.target {
+    filter: invert(100);
+}
+
+.iconos img {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+
+
+.homebox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+
+.homeimagen {
+    height: 20rem;
+    margin-left: 2rem;
+}
+
+.hometext {
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+    color: rgb(58, 77, 92);
+}
+
+
+.consultoriobox {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+
+.aboutbox {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    color: rgb(58, 77, 92);
+}
+
+
+
+.container {
+    padding: 2%;
+    margin-top: 8%;
+    gap: 5rem 0rem;
+    ;
+    grid-template-areas:
+        "osde galeno swiss-medical"
+        "comercio poder-judicial sancor-salud"
+        "unión-personal medicus prevención-art";
+}
+
+
+
+
+.container div {
+    border-radius: 0.5rem;
+    font-size: 1.9rem;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(251, 250, 239));
+    color: rgb(58, 77, 92)
+}
+
+
+.container div p {
+    margin-top: 3rem;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-weight: lighter;
+}
+
+
+
+.osde {
+    grid-area: osde;
+}
+
+.galeno {
+    grid-area: galeno;
+}
+
+.swiss-medical {
+    grid-area: swiss-medical;
+}
+
+.comercio {
+    grid-area: comercio;
+}
+
+.poder-judicial {
+    grid-area: poder-judicial;
+
+}
+
+.sancor-salud {
+    grid-area: sancor-salud;
+}
+
+.unión-personal {
+    grid-area: unión-personal;
+}
+
+.medicus {
+    grid-area: medicus;
+}
+
+.prevención-art {
+    grid-area: prevención-art;
+}
+
+
+
+.contactobox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: rgb(58, 77, 92)
+}
+
+
+
+
+.datosbox {
+    display: flex;
+    flex-direction: row;
+    font-size: .8rem;
+    margin-top: 10%;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+
+
+.dato {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: solid;
+}
+
+
+
+.formulario {
+
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    background-image: linear-gradient(rgb(254, 254, 254), white);
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.3rem;
+}
+
+
+
+
+.fieldset {
+    border: 0rem;
+}
+
+
+
+.formtitulo {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+
+.formelement {
+    padding: 0.8rem;
+    right: 0%;
+    font-size: 1.5rem;
+}
+
+
+
+.input {
+    border-radius: 0.5rem;
+    padding-right: 0cm;
+    height: 80%;
+    width: 100%
+}
+
+
+
+.formdesplegar {
+    text-align: right;
+}
+
+.enviar {
+    width: 100%;
+    text-align: right;
+    background-color: rgb(255, 255, 255);
+    border: 0rem;
+    color: rgb(58, 77, 92);
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+
+.footerflex {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+
+.footerlista {
+    list-style: none;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 0.3rem;
+    color: rgb(255, 255, 255);
+}
+
+@media (min-width: 480px) {
+    .menuelem {
+        font-size: 2rem;
+        padding: 0.2rem 2rem 0rem;
+    }
+
+    .hometext {
+        line-height: 6rem;
+        ;
+        padding-top: 3rem;
+    }
+
+    .aboutbox {
+        line-height: 5rem;
+    }
+    .container {
+        margin-top: -1rem;
+    }
+
+    .datosbox {
+        font-size: 1rem;
+        margin-top: 10%;
+    }
+
+    .formelement {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 600px) {
+
+    .menuelem {
+        font-size: 2.3rem;
+        padding: 0.2rem 3rem 0rem;
+    }
+
+    .homeimagen {
+        height: 30rem;
+        margin-left: 2rem;
+    }
+
+
+    .hometext {
+        line-height: 6rem;
+        ;
+        padding-top: 3rem;
+    }
+
+    .abouttext {
+        font-size: 1.8rem;
+        line-height: 6rem;
+    }
+
+    .datosbox {
+        font-size: 1.6rem;
+        margin-top: 10%;
+    }
+
+    .formtitulo {
+        font-size: 2.5rem;
+        margin-top: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .formelement {
+        font-size: 1.7rem;
+    }
+
+    .input {
+        width: 100%
+    }
+
+
+    .footerflex {
+        text-align: center;
+        margin-top: 3rem;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
+    .footerlista {
+        font-size: 0.5rem;
+        color: rgb(255, 255, 255);
+    }
+
+}
+
+
+@media (min-width: 768px) {
+
+    .headerbox {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        height: 9rem;
+    }
+
+    .nombre {
+        text-align: right;
+        font-size: 4rem;
+        padding-right: 5rem;
+}
+
+
+    .homeimagen {
+        height: 30rem;
+        margin-left: 2rem;
+    }
+
+    .iconos img {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .hometext {
+        line-height: 6rem;
+        padding: 2rem 3rem;
+    }
+
+    .aboutbox {
+        line-height: 5rem;
+    }
+
+    .abouttext {
+        font-size: 2.5rem;
+        line-height: 5rem;
+    }
+
+    .container {
+        display: grid;
+        height: 45rem;
+        margin-top: 8rem;
+    }
+
+
+    .contactobox {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .formulario {
+        height: 41rem;
+    }
+
+
+    .datosbox {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 19rem;
+        margin-left: 5rem;
+        margin-right: 3rem;
+        font-size: 1.5rem;
+        margin-bottom: -11rem;
+    }
+
+    .dato {
+        margin-top: 1rem;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .formtitulo {
+
+        font-size: 2.5rem;
+        margin-top: 3.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .formelement {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+
+    .input {
+        width: 100%
+    }
+
+
+
+    .footerflex {
+        margin-top: 1.8rem;
+    }
+
+    .footerlista {
+        font-size: 1.4rem;
+        color: rgb(255, 255, 255);
+        padding-top: 2rem;
+    }
+
+}
+
+@media (min-width: 900px){.formulario{width: 120%;}}
+@media (min-width: 950px){.formulario{width: 130%;}}
+@media (min-width: 990px){.formulario{width: 135%;}}
+
+@media (min-width: 1024px) {
+
+    .grid {
+        display: grid;
+        grid-template-areas:
+            "lateral menu menu"
+            "lateral principal secundario"
+            "lateral pie pie";
+
+        grid-template-columns: 10% auto 10%;
+        grid-template-rows: 13% 61rem 13%;
+
+    }
+
+    .headerbox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        height: 9rem;
+        margin-left: 2rem;
+        padding-right: 2rem;
+        padding-right: 3rem;
+    }
+
+    .nombre {
+        text-align: right;
+        font-size: 5rem;
+        padding-right: 5rem;
+
+
+    }
+
+    .iconos img {
+        margin-top: 5rem;
+        height: 3.3rem;
+        width: 3.3rem;
+    }
+
+    .homebox {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .homeimagen {
+        height: 45rem;
+        width: 35rem;
+    }
+
+
+    .hometext {
+        text-align: right;
+        font-size: 2.8rem;
+        line-height: 6rem;
+        padding: 5rem 8rem 0rem 0rem;
+    }
+
+    
+
+    .abouttext {
+        font-size: 3rem;
+        line-height: 5rem;
+        padding: 3rem;
+    }
+
+    .datosbox {
+
+        width: 23rem;
+
+    }
+
+    .dato {
+        margin-top: 1rem;
+    }
+
+    .formulario {
+        width: 130%;
+    }
+
+    .formtitulo {
+        text-align: left;
+        margin-left: 1rem;
+        margin-bottom: -0.5rem;
+    }
+}
+
+.formelement {
+    text-align: right;
+    font-size: 1.8rem;
+    padding: 1.5rem;
+}
+
+.input {
+    width: 100%
+}
+
+@media (min-width: 1200px) {
+
+    .grid {
+        grid-template-columns: 8% auto 5%;
+        grid-template-rows: 12% 61rem 13%;
+
+    }
+
+    .headerbox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        height: 9rem;
+        margin-left: 2rem;
+        padding-right: 2rem;
+        padding-right: 3rem;
+    }
+
+    .nombre {
+        text-align: right;
+        font-size: 5rem;
+        padding-right: 5rem;
+
+
+    }
+
+    .iconos img {
+        margin-top: 4rem;
+        height: 4rem;
+        width: 4rem;
+    }
+
+
+    .homeimagen {
+        height: 60rem;
+        width: 50rem;
+    }
+
+
+    .hometext {
+        text-align: right;
+        font-size: 3rem;
+        line-height: 6rem;
+        padding: 0rem 8rem 0rem 0rem;
+    }
+
+
+    .abouttext {
+        font-size: 3.5rem;
+        line-height: 6rem;
+        padding: 3rem;
+    }
+
+
+    .datosbox {
+
+        width: 30rem;
+
+    }
+
+    .dato {
+        margin-top: 1rem;
+    }
+
+    .formulario {
+        width: 180%;
+    }
+
+    .formtitulo {
+        text-align: left;
+        margin-left: 1rem;
+        margin-bottom: -0.5rem;
+    }
+}
+
+
+.footerlista {
+    font-size: 1.8rem;
+}
