@@ -20,7 +20,7 @@ html {
         "pie pie pie";
 
     grid-template-columns: 10% auto 10%;
-    grid-template-rows: 13% 60rem 16%;
+    grid-template-rows: 13% 70rem 16%;
     column-gap: 0.2rem;
     row-gap: 0.3rem;
 }
@@ -51,7 +51,6 @@ footer {
     ;
 }
 
-
 .headerbox {
     display: flex;
     flex-direction: column;
@@ -72,7 +71,6 @@ footer {
     border-top: solid white;
 }
 
-
 .menu {
     display: flex;
     width: 100%;
@@ -81,24 +79,19 @@ footer {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-family: 'Kdam Thmor Pro', sans-serif;
-
-
 }
 
 .menu div li a {
-    font-size: 1.1rem;
     text-decoration: none;
     color: rgb(255, 255, 255);
 
 }
 
-
 .menuelem {
-    padding: 0.2rem 1rem 0rem;
+    font-size: 1rem;
+    padding: 0.2rem 1.5rem 0rem;
     border-right: solid rgb(197, 187, 167);
 }
-
-
 
 .iconos {
     display: flex;
@@ -120,8 +113,6 @@ footer {
     width: 2rem;
 }
 
-
-
 .homebox {
     display: flex;
     flex-direction: column;
@@ -129,10 +120,9 @@ footer {
     align-items: center;
 }
 
-
-
 .homeimagen {
-    height: 20rem;
+    height: 25rem;
+    margin-top: 3rem;
     margin-left: 2rem;
 }
 
@@ -141,17 +131,13 @@ footer {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.8rem;
-    line-height: 3.5rem;
+    line-height: 6rem;
     color: rgb(58, 77, 92);
 }
 
-
-.consultoriobox {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
+.accesobox{height:100%;
+width: 100%;
 }
-
 
 .aboutbox {
     padding: 4rem 2rem;
@@ -161,8 +147,6 @@ footer {
     line-height: 4rem;
     color: rgb(58, 77, 92);
 }
-
-
 
 .container {
     padding: 2%;
@@ -176,8 +160,6 @@ footer {
 }
 
 
-
-
 .container div {
     border-radius: 0.5rem;
     font-size: 1.9rem;
@@ -186,14 +168,11 @@ footer {
     color: rgb(58, 77, 92)
 }
 
-
 .container div p {
     margin-top: 3rem;
     font-family: 'Kdam Thmor Pro', sans-serif;
     font-weight: lighter;
 }
-
-
 
 .osde {
     grid-area: osde;
@@ -232,8 +211,6 @@ footer {
     grid-area: prevención-art;
 }
 
-
-
 .contactobox {
     display: flex;
     flex-direction: column;
@@ -241,8 +218,6 @@ footer {
     background-color: white;
     color: rgb(58, 77, 92)
 }
-
-
 
 
 .datosbox {
@@ -253,15 +228,11 @@ footer {
     font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
-
-
 .dato {
     padding: 1rem;
     text-align: center;
     border-bottom: solid;
 }
-
-
 
 .formulario {
 
@@ -273,23 +244,16 @@ footer {
     font-size: 1.3rem;
 }
 
-
-
-
 .fieldset {
     border: 0rem;
 }
 
-
-
 .formtitulo {
-    font-size: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
     text-align: center;
-}
-
-
+        font-size: 2.5rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
 
 .formelement {
     padding: 0.8rem;
@@ -297,16 +261,12 @@ footer {
     font-size: 1.5rem;
 }
 
-
-
 .input {
     border-radius: 0.5rem;
     padding-right: 0cm;
     height: 80%;
     width: 100%
 }
-
-
 
 .formdesplegar {
     text-align: right;
@@ -321,16 +281,14 @@ footer {
     font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
-
 .footerflex {
     text-align: center;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
-
 
 .footerlista {
     list-style: none;
@@ -341,21 +299,21 @@ footer {
 
 @media (min-width: 480px) {
     .menuelem {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 0.2rem 2rem 0rem;
     }
 
     .hometext {
+
         line-height: 6rem;
         ;
         padding-top: 3rem;
     }
 
     .aboutbox {
+        margin-top: 3rem;
+        font-size: 1.7rem;
         line-height: 5rem;
-    }
-    .container {
-        margin-top: -1rem;
     }
 
     .datosbox {
@@ -366,20 +324,23 @@ footer {
     .formelement {
         font-size: 1.8rem;
     }
+
+    .footerflex {
+        margin-top: 1.5rem;
+    }
 }
 
 @media (min-width: 600px) {
 
     .menuelem {
-        font-size: 2.3rem;
-        padding: 0.2rem 3rem 0rem;
+        font-size: 1.8rem;
+        padding: 0.2rem 2rem;
     }
 
     .homeimagen {
         height: 30rem;
         margin-left: 2rem;
     }
-
 
     .hometext {
         line-height: 6rem;
@@ -411,7 +372,6 @@ footer {
         width: 100%
     }
 
-
     .footerflex {
         text-align: center;
         margin-top: 3rem;
@@ -427,7 +387,6 @@ footer {
 
 }
 
-
 @media (min-width: 768px) {
 
     .headerbox {
@@ -441,8 +400,12 @@ footer {
         text-align: right;
         font-size: 4rem;
         padding-right: 5rem;
-}
+    }
 
+    .menuelem {
+        font-size: 1.4rem;
+        padding: 0rem 1.8rem;
+    }
 
     .homeimagen {
         height: 30rem;
@@ -461,9 +424,6 @@ footer {
         padding: 2rem 3rem;
     }
 
-    .aboutbox {
-        line-height: 5rem;
-    }
 
     .abouttext {
         font-size: 2.5rem;
@@ -476,7 +436,6 @@ footer {
         margin-top: 8rem;
     }
 
-
     .contactobox {
         flex-direction: row;
         align-items: flex-end;
@@ -485,7 +444,6 @@ footer {
     .formulario {
         height: 41rem;
     }
-
 
     .datosbox {
         flex-direction: column;
@@ -521,23 +479,48 @@ footer {
         width: 100%
     }
 
-
-
     .footerflex {
         margin-top: 1.8rem;
     }
 
     .footerlista {
-        font-size: 1.4rem;
-        color: rgb(255, 255, 255);
-        padding-top: 2rem;
+        padding-top: 3rem;
     }
 
 }
 
-@media (min-width: 900px){.formulario{width: 120%;}}
-@media (min-width: 950px){.formulario{width: 130%;}}
-@media (min-width: 990px){.formulario{width: 135%;}}
+@media (min-width: 900px) {
+    .formulario {
+        width: 120%
+    }
+
+    .abouttext {
+        font-size: 3rem;
+        line-height: 6rem;
+    }
+
+    .menuelem {
+        font-size: 1.8rem;
+        padding: 0rem 2rem;
+    }
+
+    .footerflex {
+        margin-top: 3.5rem;
+    }
+
+}
+
+@media (min-width: 950px) {
+    .formulario {
+        width: 130%;
+    }
+}
+
+@media (min-width: 990px) {
+    .formulario {
+        width: 135%;
+    }
+}
 
 @media (min-width: 1024px) {
 
@@ -548,7 +531,7 @@ footer {
             "lateral principal secundario"
             "lateral pie pie";
 
-        grid-template-columns: 10% auto 10%;
+        grid-template-columns: 8% auto 10%;
         grid-template-rows: 13% 61rem 13%;
 
     }
@@ -597,12 +580,11 @@ footer {
         padding: 5rem 8rem 0rem 0rem;
     }
 
-    
 
     .abouttext {
         font-size: 3rem;
         line-height: 5rem;
-        padding: 3rem;
+        padding: 2rem 3rem;
     }
 
     .datosbox {
@@ -623,23 +605,28 @@ footer {
         text-align: left;
         margin-left: 1rem;
         margin-bottom: -0.5rem;
+
     }
-}
 
-.formelement {
-    text-align: right;
-    font-size: 1.8rem;
-    padding: 1.5rem;
-}
+    .formelement {
+        text-align: right;
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
 
-.input {
-    width: 100%
+    .input {
+        width: 100%
+    }
+
+    .footerflex {
+        margin-top: 1.5rem;
+    }
 }
 
 @media (min-width: 1200px) {
 
     .grid {
-        grid-template-columns: 8% auto 5%;
+        grid-template-columns: 7% auto 5%;
         grid-template-rows: 12% 61rem 13%;
 
     }
@@ -664,18 +651,21 @@ footer {
 
     }
 
+    .menuelem {
+        font-size: 2rem;
+        padding-left: 4rem;
+    }
+
     .iconos img {
         margin-top: 4rem;
         height: 4rem;
         width: 4rem;
     }
 
-
     .homeimagen {
-        height: 60rem;
+        height: 55rem;
         width: 50rem;
     }
-
 
     .hometext {
         text-align: right;
@@ -684,13 +674,11 @@ footer {
         padding: 0rem 8rem 0rem 0rem;
     }
 
-
     .abouttext {
         font-size: 3.5rem;
         line-height: 6rem;
-        padding: 3rem;
+        padding: 1rem 3rem;
     }
-
 
     .datosbox {
 
@@ -713,7 +701,7 @@ footer {
     }
 }
 
-
 .footerlista {
+    margin-top: -1rem;
     font-size: 1.8rem;
 }
