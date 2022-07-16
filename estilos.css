@@ -20,7 +20,7 @@ html {
         "pie pie pie";
 
     grid-template-columns: 10% auto 10%;
-    grid-template-rows: 13% 70rem 16%;
+    grid-template-rows: auto 70rem 16%;
     column-gap: 0.2rem;
     row-gap: 0.3rem;
 }
@@ -56,9 +56,7 @@ footer {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 0.5rem;
-    margin-right: 2rem;
+
 }
 
 .nombre {
@@ -71,27 +69,8 @@ footer {
     border-top: solid white;
 }
 
-.menu {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    list-style: none;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-family: 'Kdam Thmor Pro', sans-serif;
-}
-
-.menu div li a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-
-}
-
-.menuelem {
-    font-size: 1rem;
-    padding: 0.2rem 1.5rem 0rem;
-    border-right: solid rgb(197, 187, 167);
-}
+.navbar{font-size: 2rem;}
+.nav-link{margin-left: 2rem;}
 
 .iconos {
     display: flex;
@@ -130,13 +109,15 @@ footer {
     padding: 2rem 1rem;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.8rem;
-    line-height: 6rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-top: 2rem;
     color: rgb(58, 77, 92);
 }
 
-.accesobox{height:100%;
-width: 100%;
+.accesobox {
+    height: 100%;
+    width: 100%;
 }
 
 .aboutbox {
@@ -144,72 +125,13 @@ width: 100%;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
-    line-height: 4rem;
+    line-height: 3rem;
     color: rgb(58, 77, 92);
 }
-
-.container {
-    padding: 2%;
-    margin-top: 8%;
-    gap: 5rem 0rem;
-    ;
-    grid-template-areas:
-        "osde galeno swiss-medical"
-        "comercio poder-judicial sancor-salud"
-        "unión-personal medicus prevención-art";
-}
+.abouttext{margin-bottom: 5rem;}
 
 
-.container div {
-    border-radius: 0.5rem;
-    font-size: 1.9rem;
-    text-align: center;
-    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(251, 250, 239));
-    color: rgb(58, 77, 92)
-}
-
-.container div p {
-    margin-top: 3rem;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-weight: lighter;
-}
-
-.osde {
-    grid-area: osde;
-}
-
-.galeno {
-    grid-area: galeno;
-}
-
-.swiss-medical {
-    grid-area: swiss-medical;
-}
-
-.comercio {
-    grid-area: comercio;
-}
-
-.poder-judicial {
-    grid-area: poder-judicial;
-
-}
-
-.sancor-salud {
-    grid-area: sancor-salud;
-}
-
-.unión-personal {
-    grid-area: unión-personal;
-}
-
-.medicus {
-    grid-area: medicus;
-}
-
-.prevención-art {
-    grid-area: prevención-art;
-}
+.acordioncontenedor{margin: 10%;}
 
 .contactobox {
     display: flex;
@@ -250,10 +172,10 @@ width: 100%;
 
 .formtitulo {
     text-align: center;
-        font-size: 2.5rem;
-        margin-top: 4rem;
-        margin-bottom: 3rem;
-    }
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
 
 .formelement {
     padding: 0.8rem;
@@ -298,14 +220,10 @@ width: 100%;
 }
 
 @media (min-width: 480px) {
-    .menuelem {
-        font-size: 1.5rem;
-        padding: 0.2rem 2rem 0rem;
-    }
 
     .hometext {
 
-        line-height: 6rem;
+        line-height: 4rem;
         ;
         padding-top: 3rem;
     }
@@ -313,7 +231,7 @@ width: 100%;
     .aboutbox {
         margin-top: 3rem;
         font-size: 1.7rem;
-        line-height: 5rem;
+        line-height: 3rem;
     }
 
     .datosbox {
@@ -332,10 +250,7 @@ width: 100%;
 
 @media (min-width: 600px) {
 
-    .menuelem {
-        font-size: 1.8rem;
-        padding: 0.2rem 2rem;
-    }
+
 
     .homeimagen {
         height: 30rem;
@@ -343,19 +258,19 @@ width: 100%;
     }
 
     .hometext {
-        line-height: 6rem;
+        line-height: 5rem;
         ;
         padding-top: 3rem;
     }
 
     .abouttext {
         font-size: 1.8rem;
-        line-height: 6rem;
+        line-height: 3.5rem;
     }
 
     .datosbox {
         font-size: 1.6rem;
-        margin-top: 10%;
+        margin-top: 8%;
     }
 
     .formtitulo {
@@ -374,7 +289,7 @@ width: 100%;
 
     .footerflex {
         text-align: center;
-        margin-top: 3rem;
+        margin-top: 4rem;
         flex-direction: row;
         justify-content: space-evenly;
     }
@@ -393,7 +308,6 @@ width: 100%;
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-evenly;
-        height: 9rem;
     }
 
     .nombre {
@@ -420,14 +334,15 @@ width: 100%;
     }
 
     .hometext {
-        line-height: 6rem;
+        line-height: rem;
         padding: 2rem 3rem;
     }
 
 
     .abouttext {
-        font-size: 2.5rem;
-        line-height: 5rem;
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-top: 0rem;
     }
 
     .container {
@@ -442,7 +357,7 @@ width: 100%;
     }
 
     .formulario {
-        height: 41rem;
+        height: 35rem;
     }
 
     .datosbox {
@@ -495,8 +410,9 @@ width: 100%;
     }
 
     .abouttext {
-        font-size: 3rem;
-        line-height: 6rem;
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-top: -3rem;
     }
 
     .menuelem {
@@ -532,7 +448,7 @@ width: 100%;
             "lateral pie pie";
 
         grid-template-columns: 8% auto 10%;
-        grid-template-rows: 13% 61rem 13%;
+        grid-template-rows: 13% auto 13%;
 
     }
 
@@ -574,6 +490,7 @@ width: 100%;
 
 
     .hometext {
+        display: hi;
         text-align: right;
         font-size: 2.8rem;
         line-height: 6rem;
@@ -582,9 +499,11 @@ width: 100%;
 
 
     .abouttext {
-        font-size: 3rem;
-        line-height: 5rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
         padding: 2rem 3rem;
+        margin-top: -5rem;
+        margin-bottom: 1rem;
     }
 
     .datosbox {
@@ -602,6 +521,7 @@ width: 100%;
     }
 
     .formtitulo {
+        font-size: 1rem;
         text-align: left;
         margin-left: 1rem;
         margin-bottom: -0.5rem;
@@ -610,7 +530,7 @@ width: 100%;
 
     .formelement {
         text-align: right;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         padding: 1.5rem;
     }
 
@@ -625,9 +545,13 @@ width: 100%;
 
 @media (min-width: 1200px) {
 
+
+    .navbar{font-size: 2.5rem;}
+.nav-link{margin-left: 3rem;}
+
     .grid {
         grid-template-columns: 7% auto 5%;
-        grid-template-rows: 12% 61rem 13%;
+        grid-template-rows: 10rem auto 10rem;
 
     }
 
@@ -637,10 +561,7 @@ width: 100%;
         flex-wrap: nowrap;
         align-items: flex-end;
         justify-content: space-evenly;
-        height: 9rem;
-        margin-left: 2rem;
-        padding-right: 2rem;
-        padding-right: 3rem;
+        height: 9rem;       
     }
 
     .nombre {
@@ -651,10 +572,7 @@ width: 100%;
 
     }
 
-    .menuelem {
-        font-size: 2rem;
-        padding-left: 4rem;
-    }
+    
 
     .iconos img {
         margin-top: 4rem;
@@ -667,16 +585,11 @@ width: 100%;
         width: 50rem;
     }
 
-    .hometext {
-        text-align: right;
-        font-size: 3rem;
-        line-height: 6rem;
-        padding: 0rem 8rem 0rem 0rem;
-    }
+
 
     .abouttext {
-        font-size: 3.5rem;
-        line-height: 6rem;
+        font-size: 3rem;
+        line-height: 3.5rem;
         padding: 1rem 3rem;
     }
 
