@@ -28,12 +28,23 @@ html {
 header {
     background-image: linear-gradient(rgb(201, 215, 216), rgb(70, 130, 128));
     grid-area: menu;
-    border-bottom: solid rgb(188, 168, 125)
+    border-bottom: solid rgb(188, 168, 125);
+    animation-duration: 7s;
+    animation-name: colorefect;
+    animation-delay: -2s;
+}
+
+header:hover {
+    background-image: linear-gradient(to right, rgb(176, 205, 207), rgb(41, 77, 76));
 }
 
 aside {
     background-image: linear-gradient(to right, rgb(176, 205, 207), rgb(70, 130, 128));
     grid-area: lateral;
+}
+
+aside:hover {
+    background-image: linear-gradient(to right, rgb(176, 205, 207), rgb(41, 77, 76));
 }
 
 main {
@@ -57,6 +68,21 @@ footer {
     flex-wrap: nowrap;
     align-items: center;
 
+
+}
+
+
+@keyframes colorefect {
+    from {
+        filter: contrast(2);
+
+
+    }
+
+    to {
+        background-image: linear-gradient(rgb(201, 215, 216), rgb(70, 130, 128));
+
+    }
 }
 
 .nombre {
@@ -67,12 +93,57 @@ footer {
     font-size: 2.5rem;
     color: white;
     border-top: solid white;
+    animation-duration: 10s;
+    animation-name: slidein;
 }
 
-.navbar{font-size: 2rem;}
-.nav-link{margin-left: 2rem;}
+@keyframes slidein {
+    from {
+        margin-left: 10%;
+        width: 10%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.navbar {
+    font-size: 2rem;
+}
+
+.navhome {
+    font-size: 2rem;
+    animation-duration: 7s;
+    animation-name: slidetop;
+    animation-delay: -2s;
+}
+
+
+@keyframes slidetop {
+    from {
+        margin-bottom: -10%;
+
+    }
+
+    to {
+        margin-bottom: 0%;
+    }
+}
+
+.navbar:hover {
+    filter: invert(100);
+}
+
+.nav-link {
+    margin-left: 2rem;
+}
+
+
 
 .iconos {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,6 +151,8 @@ footer {
     justify-content: space-between;
     margin-top: 7rem;
 }
+
+
 
 .target {
     filter: invert(100);
@@ -90,6 +163,11 @@ footer {
     margin-bottom: 5rem;
     height: 2rem;
     width: 2rem;
+}
+
+.iconos img:hover {
+    filter: invert(100);
+    margin-left: 2rem;
 }
 
 .homebox {
@@ -103,6 +181,19 @@ footer {
     height: 25rem;
     margin-top: 3rem;
     margin-left: 2rem;
+    animation-duration: 7s;
+    animation-name: fadein;
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }
 
 .hometext {
@@ -113,6 +204,8 @@ footer {
     line-height: 2.5rem;
     margin-top: 2rem;
     color: rgb(58, 77, 92);
+    animation-duration: 7s;
+    animation-name: fadein;
 }
 
 .accesobox {
@@ -128,10 +221,16 @@ footer {
     line-height: 3rem;
     color: rgb(58, 77, 92);
 }
-.abouttext{margin-bottom: 5rem;}
+
+.abouttext {    animation-duration: 7s;
+    animation-name: fadein;
+    margin-bottom: 5rem;
+}
 
 
-.acordioncontenedor{margin: 10%;}
+.acordioncontenedor {
+    margin: 10%;
+}
 
 .contactobox {
     display: flex;
@@ -530,7 +629,7 @@ footer {
 
     .formelement {
         text-align: right;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         padding: 1.5rem;
     }
 
@@ -546,8 +645,13 @@ footer {
 @media (min-width: 1200px) {
 
 
-    .navbar{font-size: 2.5rem;}
-.nav-link{margin-left: 3rem;}
+    .navbar {
+        font-size: 2.5rem;
+    }
+
+    .nav-link {
+        margin-left: 3rem;
+    }
 
     .grid {
         grid-template-columns: 7% auto 5%;
@@ -561,7 +665,7 @@ footer {
         flex-wrap: nowrap;
         align-items: flex-end;
         justify-content: space-evenly;
-        height: 9rem;       
+        height: 9rem;
     }
 
     .nombre {
@@ -572,7 +676,6 @@ footer {
 
     }
 
-    
 
     .iconos img {
         margin-top: 4rem;
@@ -610,7 +713,6 @@ footer {
     .formtitulo {
         text-align: left;
         margin-left: 1rem;
-        margin-bottom: -0.5rem;
     }
 }
 
