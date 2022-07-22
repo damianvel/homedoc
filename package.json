@@ -1,0 +1,21 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "<h1>Home Doc</h1>\r <h2>Este es mi proyecto para la cursada de Coder House</h2>\r <h3>Uso las siguientes tecnologías</h3>\r <ul>\r <li>Html 5</li>\r <li>CSS3</li>\r <li>Bootstrap</li>\r </ul>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damianvel/homedoc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damianvel/homedoc/issues"
+  },
+  "homepage": "https://github.com/damianvel/homedoc#readme"
+}

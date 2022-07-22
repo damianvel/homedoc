@@ -16,64 +16,58 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 
 <body>
     <div class="grid">
         <header>
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid">
+                    <a class="navbar-brand  justfirs" href="#">Home Doc</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse hamburguesa" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">home</a>
+                            </li>
 
-            <div class="headerbox">
+                            <li class="nav-item">
+                                <a class="nav-link" href="consultorio.html">acceso</a>
+                            </li>
 
-                <div>
-                    <h1 class="nombre">HomeDoc.</h1>
-                </div>
-
-
-                <div>
-                    <nav class="navbar navbar-expand bg-transparent px-4">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="index.html">home</a>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="about.html">about</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html">contact</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    coberturas
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="coberturas.html">Obras Sociales</a></li>
+                                    <li><a class="dropdown-item" href="coberturas.html">ART</a></li>
+                                    <li>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="consultorio.html">acceso</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="about.html">about</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="contacto.html">contact</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            coberturas
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li><a class="dropdown-item" href="coberturas.html">Obras Sociales</a></li>
-                                            <li><a class="dropdown-item" href="coberturas.html">ART</a></li>
-                                            <li>
-                                            </li>
-                                            <li><a class="dropdown-item" href="coberturas.html">Mi Plan</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a class="dropdown-item" href="coberturas.html">Mi Plan</a></li>
                                 </ul>
+                            </li>
 
-                            </div>
-                        </div>
-                    </nav>
+                        </ul>
+
+                    </div>
                 </div>
-            </div>
+            </nav>
         </header>
+
         <aside>
             <div class="iconos">
                 <div>
@@ -94,7 +88,9 @@
         </aside>
 
         <main class="aboutbox">
+
             <div class="aboutflex">
+
                 <div>
                     <p class="abouttext">Somos una plataforma de telemedicina, apalancada en Inteligencia Artificial.
                         Optimizamos tu tiempo y para que recibas la mejor atención médica desde la comodidad de tu
@@ -106,70 +102,78 @@
                         nuestra plataforma.
                     </p>
                 </div>
-                <div>
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                                aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/c1.jpg" class="d-block w-100" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/c2.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/c3.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/c4.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">anterior</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">siguiente</span>
-                        </button>
+
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 3"></button>
                     </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/c1.jpg" class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/c2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/c3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/c4.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">siguiente</span>
+                    </button>
                 </div>
             </div>
 
 
+
         </main>
         <section></section>
-        <footer>
 
-            <ul class="footerlista">
-                <div class="footerflex">
 
-                    <div>
-                        <li>politica de privacidad</li>
-                    </div>
-                    <div>
-                        <li>terminos y condiciones</li>
-                    </div>
-                    <div>
-                        <li>informacion fiscal </li>
-                    </div>
-                    <div>
-                        <li>impacto ambiental</li>
-                    </div>
+        <footer class="navbar navbar-expand">
+            <div class="container-fluid">
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav  justify-content-center nav-pills nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">politicas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="consultorio.html">datos personales</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">fiscal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">ambiental</a>
+                        </li>
+
+                    </ul>
+
                 </div>
-            </ul>
+            </div>
 
         </footer>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

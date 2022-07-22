@@ -16,64 +16,57 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
     <div class="grid">
         <header>
-
-            <div class="headerbox">
-
-                <div>
-                    <h1 class="nombre">HomeDoc.</h1>
-                </div>
-
-
-                <div>
-                    <nav class="navbar navhome navbar-expand bg-transparent px-4">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="index.html">home</a>
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid">
+                    <a class="navbar-brand  justfirs" href="#">Home Doc</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse hamburguesa" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">home</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link" href="consultorio.html">acceso</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">about</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html">contact</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    coberturas
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="coberturas.html">Obras Sociales</a></li>
+                                    <li><a class="dropdown-item" href="coberturas.html">ART</a></li>
+                                    <li>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="consultorio.html">acceso</a>
-                                    </li>
-                            
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="about.html">about</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="contacto.html">contact</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            coberturas
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li><a class="dropdown-item" href="coberturas.html">Obras Sociales</a></li>
-                                            <li><a class="dropdown-item" href="coberturas.html">ART</a></li>
-                                            <li>
-                                            </li>
-                                            <li><a class="dropdown-item" href="coberturas.html">Mi Plan</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a class="dropdown-item" href="coberturas.html">Mi Plan</a></li>
                                 </ul>
-                                
-                            </div>
-                        </div>
-                    </nav>
+                            </li>
+                        
+                        </ul>
+    
+                    </div>
                 </div>
-            </div>
+            </nav>
         </header>
+
         <aside>
             <div class="iconos">
                 <div class="target">
@@ -108,27 +101,33 @@
             </div>
         </main>
         <section></section>
-        <footer>
-
-            <ul class="footerlista">
-                <div class="footerflex">
-
-                    <div>
-                        <li>politica de privacidad</li>
-                    </div>
-                    <div>
-                        <li>terminos y condiciones</li>
-                    </div>
-                    <div>
-                        <li>informacion fiscal </li>
-                    </div>
-                    <div>
-                        <li>impacto ambiental</li>
-                    </div>
+  
+        <footer class="navbar navbar-expand">
+            <div class="container-fluid">
+    
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav  justify-content-center nav-pills nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">politicas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="consultorio.html">datos personales</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">fiscal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">ambiental</a>
+                        </li>
+    
+                    </ul>
+    
                 </div>
-            </ul>
-
+            </div>
+    
         </footer>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"

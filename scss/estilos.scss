@@ -1,3 +1,6 @@
+@import "variables";
+
+
 html {
     font-size: 62.5%;
 }
@@ -12,6 +15,10 @@ html {
     padding: 0px;
 }
 
+
+/* Layout*/
+
+
 .grid {
     display: grid;
     grid-template-areas:
@@ -19,32 +26,32 @@ html {
         "lateral principal secundario"
         "pie pie pie";
 
-    grid-template-columns: 10% auto 10%;
-    grid-template-rows: auto 70rem 16%;
+    grid-template-columns: 6% auto 10%;
+    grid-template-rows: auto 80rem auto;
     column-gap: 0.2rem;
     row-gap: 0.3rem;
 }
 
 header {
-    background-image: linear-gradient(rgb(201, 215, 216), rgb(70, 130, 128));
     grid-area: menu;
-    border-bottom: solid rgb(188, 168, 125);
     animation-duration: 7s;
     animation-name: colorefect;
     animation-delay: -2s;
 }
 
-header:hover {
-    background-image: linear-gradient(to right, rgb(176, 205, 207), rgb(41, 77, 76));
-}
+
 
 aside {
-    background-image: linear-gradient(to right, rgb(176, 205, 207), rgb(70, 130, 128));
+    background-image: linear-gradient(to left, $color-gradient-left, $color-gradient-right);
     grid-area: lateral;
+    animation-name: fadein;
+    animation-duration: 3s;
+
 }
 
 aside:hover {
-    background-image: linear-gradient(to right, rgb(176, 205, 207), rgb(41, 77, 76));
+ 
+    background-image: linear-gradient(to left, $color-gradient-left, $color-gradient-accent);
 }
 
 main {
@@ -52,24 +59,19 @@ main {
 }
 
 section {
-    background-image: linear-gradient(to left, rgb(176, 205, 207), rgb(70, 130, 128));
+    background-image: linear-gradient(to left, $color-gradient-left, $color-gradient-right);
     grid-area: secundario;
 }
 
 footer {
     grid-area: pie;
-    background-image: linear-gradient(rgb(201, 215, 216), rgb(70, 130, 128));
+    background-image: linear-gradient($color-gradient-left, $color-gradient-right);
     ;
 }
 
-.headerbox {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
 
+/* Efects*/
 
-}
 
 
 @keyframes colorefect {
@@ -80,44 +82,20 @@ footer {
     }
 
     to {
-        background-image: linear-gradient(rgb(201, 215, 216), rgb(70, 130, 128));
+        background-image: linear-gradient($color-gradient-left, $color-gradient-right);
 
     }
 }
 
-.nombre {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 2.5rem;
-    color: white;
-    border-top: solid white;
-    animation-duration: 10s;
-    animation-name: slidein;
-}
 
 @keyframes slidein {
     from {
-        margin-left: 10%;
         width: 10%
     }
 
     to {
-        margin-left: 0%;
-        width: 100%;
+        width: 70%;
     }
-}
-
-.navbar {
-    font-size: 2rem;
-}
-
-.navhome {
-    font-size: 2rem;
-    animation-duration: 7s;
-    animation-name: slidetop;
-    animation-delay: -2s;
 }
 
 
@@ -132,15 +110,83 @@ footer {
     }
 }
 
-.navbar:hover {
-    filter: invert(100);
+
+@keyframes fadein {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }
+
+/* Navegacion*/
+
+
+.navbar {
+    background-image: linear-gradient($color-gradient-left, $color-gradient-right);
+    padding-left: 5%;
+    padding-right: 7%;
+    padding-top: 2%;
+}
+
+.navbar-brand {
+    color: $color-text-accent;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 3rem;
+    border-top: solid rgb(255, 255, 255);
+    margin-left: 1rem;
+    width: 70%;
+}
+
+.justfirs {
+    animation-duration: 6s;
+    animation-name: slidein;
+}
+
+
+
+.navhome {
+    font-size: 2rem;
+    animation-duration: 7s;
+    animation-name: slidetop;
+    animation-delay: -2s;
+}
+
+
 
 .nav-link {
     margin-left: 2rem;
+    font-size: 1.5rem;
+
+}
+
+.navbar:hover {
+    background-image: linear-gradient(to right, ($color-gradient-left, $color-gradient-right));
 }
 
 
+.nav-link:hover::before {
+    content: "";
+    display: block;
+    border-bottom: 2px solid $color-accent;
+    width: auto;
+    height: 1px;
+    transition: all 2s;
+}
+
+.target {
+filter: invert($color-primary);}  
+
+.nav-link:hover {
+    color: $color-text-accent;}
+
+
+
+
+
+/* Navegacion lateral*/
 
 .iconos {
 
@@ -154,9 +200,8 @@ footer {
 
 
 
-.target {
-    filter: invert(100);
-}
+
+
 
 .iconos img {
     margin-top: 2rem;
@@ -169,6 +214,8 @@ footer {
     filter: invert(100);
     margin-left: 2rem;
 }
+
+/* homepage*/
 
 .homebox {
     display: flex;
@@ -185,17 +232,6 @@ footer {
     animation-name: fadein;
 }
 
-
-@keyframes fadein {
-    from {
-        opacity: 0%;
-    }
-
-    to {
-        opacity: 100%;
-    }
-}
-
 .hometext {
     padding: 2rem 1rem;
     text-align: center;
@@ -203,15 +239,93 @@ footer {
     font-size: 2.5rem;
     line-height: 2.5rem;
     margin-top: 2rem;
-    color: rgb(58, 77, 92);
+    color: $color-text;
     animation-duration: 7s;
     animation-name: fadein;
 }
 
+.hometext:hover {
+    color: $color-text-accent;
+}
+
+/* acceso*/
+
+
 .accesobox {
+    padding: 10%;
     height: 100%;
     width: 100%;
 }
+
+
+
+/* cobertura*/
+
+.container {
+    padding: 2%;
+    margin-top: 8%;
+    gap: 5rem 0rem;
+    ;
+    grid-template-areas:
+        "osde galeno swiss-medical"
+        "comercio poder-judicial sancor-salud"
+        "unión-personal medicus prevención-art";
+}
+
+
+.container div {
+    border-radius: 0.5rem;
+    font-size: 1.9rem;
+    text-align: center;
+    background-image: linear-gradient(to right, $color-gradient-left, $color-gradient-right);
+    color: rgb(58, 77, 92)
+}
+
+.container div p {
+    margin-top: 3rem;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-weight: lighter;
+}
+
+.osde {
+    grid-area: osde;
+}
+
+.galeno {
+    grid-area: galeno;
+}
+
+.swiss-medical {
+    grid-area: swiss-medical;
+}
+
+.comercio {
+    grid-area: comercio;
+}
+
+.poder-judicial {
+    grid-area: poder-judicial;
+
+}
+
+.sancor-salud {
+    grid-area: sancor-salud;
+}
+
+.unión-personal {
+    grid-area: unión-personal;
+}
+
+.medicus {
+    grid-area: medicus;
+}
+
+.prevención-art {
+    grid-area: prevención-art;
+}
+
+/* about*/
+
 
 .aboutbox {
     padding: 4rem 2rem;
@@ -219,25 +333,29 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     line-height: 3rem;
-    color: rgb(58, 77, 92);
+    color: $color-text;
 }
 
-.abouttext {    animation-duration: 7s;
+.abouttext {
+    animation-duration: 7s;
     animation-name: fadein;
     margin-bottom: 5rem;
 }
 
-
-.acordioncontenedor {
-    margin: 10%;
+.abouttext:hover {
+    color: $color-text-accent;
 }
+
+
+/* contacto*/
+
 
 .contactobox {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
-    color: rgb(58, 77, 92)
+    color: $color-secondary;
 }
 
 
@@ -260,7 +378,6 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 1.2rem;
-    background-image: linear-gradient(rgb(254, 254, 254), white);
     font-family: 'Kdam Thmor Pro', sans-serif;
     font-size: 1.3rem;
 }
@@ -302,6 +419,9 @@ footer {
     font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
+/* footer*/
+
+
 .footerflex {
     text-align: center;
     display: flex;
@@ -315,7 +435,7 @@ footer {
     list-style: none;
     font-family: 'Kdam Thmor Pro', sans-serif;
     font-size: 0.3rem;
-    color: rgb(255, 255, 255);
+    color: $color-text-accent;
 }
 
 @media (min-width: 480px) {
@@ -342,12 +462,17 @@ footer {
         font-size: 1.8rem;
     }
 
-    .footerflex {
-        margin-top: 1.5rem;
-    }
+
 }
 
 @media (min-width: 600px) {
+
+    .iconos {
+
+
+        margin-top: 7rem;
+    }
+
 
 
 
@@ -394,31 +519,13 @@ footer {
     }
 
 
-    .footerlista {
-        font-size: 0.5rem;
-        color: rgb(255, 255, 255);
-    }
+
 
 }
 
 @media (min-width: 768px) {
 
-    .headerbox {
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-evenly;
-    }
 
-    .nombre {
-        text-align: right;
-        font-size: 4rem;
-        padding-right: 5rem;
-    }
-
-    .menuelem {
-        font-size: 1.4rem;
-        padding: 0rem 1.8rem;
-    }
 
     .homeimagen {
         height: 30rem;
@@ -493,13 +600,7 @@ footer {
         width: 100%
     }
 
-    .footerflex {
-        margin-top: 1.8rem;
-    }
 
-    .footerlista {
-        padding-top: 3rem;
-    }
 
 }
 
@@ -519,9 +620,7 @@ footer {
         padding: 0rem 2rem;
     }
 
-    .footerflex {
-        margin-top: 3.5rem;
-    }
+
 
 }
 
@@ -539,42 +638,13 @@ footer {
 
 @media (min-width: 1024px) {
 
-    .grid {
-        display: grid;
-        grid-template-areas:
-            "lateral menu menu"
-            "lateral principal secundario"
-            "lateral pie pie";
-
-        grid-template-columns: 8% auto 10%;
-        grid-template-rows: 13% auto 13%;
-
-    }
-
-    .headerbox {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: flex-end;
-        justify-content: space-evenly;
-        height: 9rem;
-        margin-left: 2rem;
-        padding-right: 2rem;
-        padding-right: 3rem;
-    }
-
-    .nombre {
-        text-align: right;
-        font-size: 5rem;
-        padding-right: 5rem;
 
 
-    }
 
     .iconos img {
-        margin-top: 5rem;
-        height: 3.3rem;
-        width: 3.3rem;
+        margin-top: 2rem;
+        height: 3rem;
+        width: 3rem;
     }
 
     .homebox {
@@ -596,16 +666,20 @@ footer {
         padding: 5rem 8rem 0rem 0rem;
     }
 
+    .accesobox {
+        padding: 0rem;
+    }
 
     .abouttext {
         font-size: 2rem;
         line-height: 2.5rem;
         padding: 2rem 3rem;
-        margin-top: -5rem;
         margin-bottom: 1rem;
     }
 
-    .datosbox {
+
+
+    .datosbox {color: $color-text-accent;
 
         width: 23rem;
 
@@ -615,21 +689,24 @@ footer {
         margin-top: 1rem;
     }
 
-    .formulario {
+
+
+
+    .formulario {color: $color-text-accent;
         width: 130%;
     }
 
     .formtitulo {
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-align: left;
         margin-left: 1rem;
-        margin-bottom: -0.5rem;
+        margin-bottom: 3.5rem;
 
     }
 
     .formelement {
         text-align: right;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         padding: 1.5rem;
     }
 
@@ -637,48 +714,17 @@ footer {
         width: 100%
     }
 
-    .footerflex {
-        margin-top: 1.5rem;
-    }
+
 }
+
+.enviar {color: $color-text-accent}
 
 @media (min-width: 1200px) {
 
 
-    .navbar {
-        font-size: 2.5rem;
-    }
-
-    .nav-link {
-        margin-left: 3rem;
-    }
-
-    .grid {
-        grid-template-columns: 7% auto 5%;
-        grid-template-rows: 10rem auto 10rem;
-
-    }
-
-    .headerbox {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: flex-end;
-        justify-content: space-evenly;
-        height: 9rem;
-    }
-
-    .nombre {
-        text-align: right;
-        font-size: 5rem;
-        padding-right: 5rem;
-
-
-    }
-
 
     .iconos img {
-        margin-top: 4rem;
+        margin-top: 3rem;
         height: 4rem;
         width: 4rem;
     }
@@ -689,11 +735,13 @@ footer {
     }
 
 
+    .carousel-inner {
+        height: 42rem;
+    }
 
     .abouttext {
-        font-size: 3rem;
+        font-size: 2rem;
         line-height: 3.5rem;
-        padding: 1rem 3rem;
     }
 
     .datosbox {
@@ -707,16 +755,55 @@ footer {
     }
 
     .formulario {
-        width: 180%;
+        margin-top: 5%;
+        width: 160%;
+    }
+
+    .formtitulo {
+        text-align: left;
+        margin-left: 1rem;
+        margin-top: 5rem;
+    }
+}
+
+@media (min-width: 1400px) {
+
+
+    .iconos img {
+        margin-top: 3rem;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .homeimagen {
+        height: 55rem;
+        width: 50rem;
+    }
+
+
+    .carousel-inner {
+        height: 45rem;
+    }
+
+
+
+    .datosbox {
+
+        width: 30rem;
+
+    }
+
+    .dato {
+        margin-top: 1rem;
+    }
+
+    .formulario {
+        margin-top: 5%;
+        width: 220%;
     }
 
     .formtitulo {
         text-align: left;
         margin-left: 1rem;
     }
-}
-
-.footerlista {
-    margin-top: -1rem;
-    font-size: 1.8rem;
 }
