@@ -1,6 +1,5 @@
 @import "variables";
 
-
 html {
     font-size: 62.5%;
 }
@@ -16,63 +15,7 @@ html {
 }
 
 
-/* Layout*/
-
-
-.grid {
-    display: grid;
-    grid-template-areas:
-        "menu menu menu"
-        "lateral principal secundario"
-        "pie pie pie";
-
-    grid-template-columns: 6% auto 10%;
-    grid-template-rows: auto 80rem auto;
-    column-gap: 0.2rem;
-    row-gap: 0.3rem;
-}
-
-header {
-    grid-area: menu;
-    animation-duration: 7s;
-    animation-name: colorefect;
-    animation-delay: -2s;
-}
-
-
-
-aside {
-    background-image: linear-gradient(to left, $color-gradient-left, $color-gradient-right);
-    grid-area: lateral;
-    animation-name: fadein;
-    animation-duration: 3s;
-
-}
-
-aside:hover {
- 
-    background-image: linear-gradient(to left, $color-gradient-left, $color-gradient-accent);
-}
-
-main {
-    grid-area: principal;
-}
-
-section {
-    background-image: linear-gradient(to left, $color-gradient-left, $color-gradient-right);
-    grid-area: secundario;
-}
-
-footer {
-    grid-area: pie;
-    background-image: linear-gradient($color-gradient-left, $color-gradient-right);
-    ;
-}
-
-
-/* Efects*/
-
-
+/* Efectos*/
 
 @keyframes colorefect {
     from {
@@ -98,6 +41,15 @@ footer {
     }
 }
 
+@keyframes slidelink {
+    from {
+        width: 10%
+    }
+
+    to {
+        width: 100%;
+    }
+}
 
 @keyframes slidetop {
     from {
@@ -113,7 +65,7 @@ footer {
 
 @keyframes fadein {
     from {
-        opacity: 0%;
+        opacity: 50%;
     }
 
     to {
@@ -121,7 +73,71 @@ footer {
     }
 }
 
-/* Navegacion*/
+@keyframes fadeout {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 50%;
+    }
+}
+
+
+/* Layout*/
+
+
+.grid {
+    display: grid;
+    grid-template-areas:
+        "menu menu menu"
+        "lateral principal secundario"
+        "pie pie pie";
+
+    grid-template-columns: 6% auto 6%;
+    grid-template-rows: auto 80rem auto;
+    column-gap: 0.2rem;
+    row-gap: 0.3rem;
+}
+
+header {
+    grid-area: menu;
+    animation-duration: 7s;
+    animation-name: colorefect;
+    animation-delay: -1s;
+}
+
+
+aside {
+    background-image: linear-gradient(to left, $color-gradient-left, $color-gradient-right);
+    grid-area: lateral;
+    animation-name: fadein;
+    animation-duration: 3s;
+
+    &:hover {
+
+        background-image: linear-gradient(to left, $color-gradient-left, $color-gradient-accent);
+    }
+}
+
+
+main {
+    grid-area: principal;
+}
+
+section {
+    background-image: linear-gradient(to left, $color-gradient-left, $color-gradient-right);
+    grid-area: secundario;
+}
+
+footer {
+    grid-area: pie;
+    background-image: linear-gradient($color-gradient-left, $color-gradient-right);
+    ;
+}
+
+
+/* Navegacion (Bootstrap)*/
 
 
 .navbar {
@@ -129,6 +145,11 @@ footer {
     padding-left: 5%;
     padding-right: 7%;
     padding-top: 2%;
+
+    &:hover {
+        background-image: linear-gradient(to right, ($color-gradient-left, $color-gradient-right));
+    }
+
 }
 
 .navbar-brand {
@@ -138,14 +159,13 @@ footer {
     border-top: solid rgb(255, 255, 255);
     margin-left: 1rem;
     width: 70%;
+
 }
 
 .justfirs {
     animation-duration: 6s;
     animation-name: slidein;
 }
-
-
 
 .navhome {
     font-size: 2rem;
@@ -155,35 +175,40 @@ footer {
 }
 
 
-
 .nav-link {
     margin-left: 2rem;
     font-size: 1.5rem;
 
-}
+    &:hover {
+        color: $color-text-accent;
 
-.navbar:hover {
-    background-image: linear-gradient(to right, ($color-gradient-left, $color-gradient-right));
-}
+        &::before {
+            content: "";
+            display: block;
+            border-bottom: 2px solid $color-accent;
+            height: 0.5px;
+            animation-name: slidelink, fadein;
+            animation-duration: 5s;
+        }
 
+        &::after {
+            content: "";
+            display: block;
+            border-bottom: 2px solid $color-accent;
+            height: 0.5px;
+            animation-name: slidelink, fadein;
+            animation-duration: 5s;
+        }
+    }
 
-.nav-link:hover::before {
-    content: "";
-    display: block;
-    border-bottom: 2px solid $color-accent;
-    width: auto;
-    height: 1px;
-    transition: all 2s;
 }
 
 .target {
-filter: invert($color-primary);}  
-
-.nav-link:hover {
-    color: $color-text-accent;}
-
-
-
+    filter: invert($color-primary);
+    animation-duration: 1s;
+    animation-name: fadein;
+    animation-iteration-count: infinite;
+}
 
 
 /* Navegacion lateral*/
@@ -196,24 +221,23 @@ filter: invert($color-primary);}
     flex-wrap: nowrap;
     justify-content: space-between;
     margin-top: 7rem;
+
+    & img {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+        height: 2rem;
+        width: 2rem;
+
+
+        &:hover {
+            filter: invert(100);
+            margin-left: 1rem;
+            padding: 3%;
+
+        }
+    }
 }
 
-
-
-
-
-
-.iconos img {
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-    height: 2rem;
-    width: 2rem;
-}
-
-.iconos img:hover {
-    filter: invert(100);
-    margin-left: 2rem;
-}
 
 /* homepage*/
 
@@ -228,8 +252,9 @@ filter: invert($color-primary);}
     height: 25rem;
     margin-top: 3rem;
     margin-left: 2rem;
-    animation-duration: 7s;
+    animation-duration: 5s;
     animation-name: fadein;
+    animation-iteration-count: infinite;
 }
 
 .hometext {
@@ -242,21 +267,21 @@ filter: invert($color-primary);}
     color: $color-text;
     animation-duration: 7s;
     animation-name: fadein;
+
+    &:hover {
+        color: $color-text-accent;
+    }
+
 }
 
-.hometext:hover {
-    color: $color-text-accent;
-}
 
 /* acceso*/
-
 
 .accesobox {
     padding: 10%;
     height: 100%;
     width: 100%;
 }
-
 
 
 /* cobertura*/
@@ -270,22 +295,23 @@ filter: invert($color-primary);}
         "osde galeno swiss-medical"
         "comercio poder-judicial sancor-salud"
         "unión-personal medicus prevención-art";
+
+    &div {
+        border-radius: 0.5rem;
+        font-size: 1.9rem;
+        text-align: center;
+        background-image: linear-gradient(to right, $color-gradient-left, $color-gradient-right);
+        color: rgb(58, 77, 92);
+
+        & p {
+            margin-top: 3rem;
+            font-family: 'Kdam Thmor Pro', sans-serif;
+            font-weight: lighter;
+        }
+    }
 }
 
 
-.container div {
-    border-radius: 0.5rem;
-    font-size: 1.9rem;
-    text-align: center;
-    background-image: linear-gradient(to right, $color-gradient-left, $color-gradient-right);
-    color: rgb(58, 77, 92)
-}
-
-.container div p {
-    margin-top: 3rem;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-weight: lighter;
-}
 
 .osde {
     grid-area: osde;
@@ -326,7 +352,6 @@ filter: invert($color-primary);}
 
 /* about*/
 
-
 .aboutbox {
     padding: 4rem 2rem;
     text-align: center;
@@ -340,10 +365,11 @@ filter: invert($color-primary);}
     animation-duration: 7s;
     animation-name: fadein;
     margin-bottom: 5rem;
-}
 
-.abouttext:hover {
-    color: $color-text-accent;
+    &:hover {
+        color: $color-text-accent;
+    }
+
 }
 
 
@@ -358,13 +384,14 @@ filter: invert($color-primary);}
     color: $color-secondary;
 }
 
-
 .datosbox {
     display: flex;
     flex-direction: row;
     font-size: .8rem;
     margin-top: 10%;
     font-family: 'Kdam Thmor Pro', sans-serif;
+    color: $color-text-accent;
+
 }
 
 .dato {
@@ -374,7 +401,6 @@ filter: invert($color-primary);}
 }
 
 .formulario {
-
     display: flex;
     flex-direction: column;
     padding: 1.2rem;
@@ -468,11 +494,8 @@ filter: invert($color-primary);}
 @media (min-width: 600px) {
 
     .iconos {
-
-
         margin-top: 7rem;
     }
-
 
 
 
@@ -519,13 +542,9 @@ filter: invert($color-primary);}
     }
 
 
-
-
 }
 
 @media (min-width: 768px) {
-
-
 
     .homeimagen {
         height: 30rem;
@@ -569,11 +588,11 @@ filter: invert($color-primary);}
     .datosbox {
         flex-direction: column;
         align-items: flex-end;
-        width: 19rem;
+        width: 35%;
         margin-left: 5rem;
-        margin-right: 3rem;
+        margin-right: 4rem;
         font-size: 1.5rem;
-        margin-bottom: -11rem;
+        margin-bottom: -18rem;
     }
 
     .dato {
@@ -601,12 +620,18 @@ filter: invert($color-primary);}
     }
 
 
-
 }
 
 @media (min-width: 900px) {
+
+    .datosbox {
+
+        width: 30%;
+
+    }
+
     .formulario {
-        width: 120%
+        width: 110%
     }
 
     .abouttext {
@@ -621,24 +646,16 @@ filter: invert($color-primary);}
     }
 
 
-
 }
 
-@media (min-width: 950px) {
-    .formulario {
-        width: 130%;
-    }
-}
 
-@media (min-width: 990px) {
+@media (min-width: 992px) {
     .formulario {
-        width: 135%;
+        width: 110%;
     }
 }
 
 @media (min-width: 1024px) {
-
-
 
 
     .iconos img {
@@ -656,7 +673,6 @@ filter: invert($color-primary);}
         height: 45rem;
         width: 35rem;
     }
-
 
     .hometext {
         display: hi;
@@ -677,30 +693,32 @@ filter: invert($color-primary);}
         margin-bottom: 1rem;
     }
 
-
-
-    .datosbox {color: $color-text-accent;
-
+    .datosbox {
         width: 23rem;
-
     }
 
     .dato {
         margin-top: 1rem;
     }
 
+    .datosbox {
+        margin-bottom: -22rem;
+    }
 
-
-
-    .formulario {color: $color-text-accent;
+    .formulario {
         width: 130%;
     }
 
+    .formelement {
+        margin-top: 2.2rem;
+        font-size: 2rem;
+    }
+
     .formtitulo {
-        font-size: 1.2rem;
+        font-size: 2rem;
         text-align: left;
         margin-left: 1rem;
-        margin-bottom: 3.5rem;
+        margin-top: 10rem;
 
     }
 
@@ -713,15 +731,14 @@ filter: invert($color-primary);}
     .input {
         width: 100%
     }
-
-
 }
 
-.enviar {color: $color-text-accent}
+.enviar {
+    color: $color-text-accent
+}
+
 
 @media (min-width: 1200px) {
-
-
 
     .iconos img {
         margin-top: 3rem;
@@ -786,24 +803,15 @@ filter: invert($color-primary);}
     }
 
 
+    }
 
     .datosbox {
+        margin-bottom: -3rem;
+    }   
 
-        width: 30rem;
-
+    .formelement {
+        font-size: 1.6rem;
+        padding: 1.5rem;
     }
 
-    .dato {
-        margin-top: 1rem;
-    }
 
-    .formulario {
-        margin-top: 5%;
-        width: 220%;
-    }
-
-    .formtitulo {
-        text-align: left;
-        margin-left: 1rem;
-    }
-}
