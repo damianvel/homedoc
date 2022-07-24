@@ -3,8 +3,24 @@ $color-secondary: rgb(48, 129, 223);
 $color-accent: rgb(112, 13, 13);
 $color-gradient-left: rgb(187, 206, 218);
 $color-gradient-right: rgb(203, 238, 219);
+
+
+$color-gradient2-left: rgb(182, 211, 202);
+$color-gradient2-right: rgb(248, 233, 233);
+
+
 $color-gradient-accent: rgb(158, 201, 243);
 $color-text: rgb(61, 61, 61);
 $color-text-accent: rgb(0, 70, 0);
+$color-text-button: rgb(238, 253, 243);
 
+$font-style: 'Chakra Petch', sans-serif;
+$font-style-second: Arial, Helvetica, sans-serif;
 
+$container2-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px
+);

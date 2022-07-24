@@ -86,7 +86,6 @@ html {
 
 /* Layout*/
 
-
 .grid {
     display: grid;
     grid-template-areas:
@@ -94,11 +93,25 @@ html {
         "lateral principal secundario"
         "pie pie pie";
 
-    grid-template-columns: 6% auto 6%;
-    grid-template-rows: auto 80rem auto;
+    grid-template-columns: 8% auto 6%;
     column-gap: 0.2rem;
     row-gap: 0.3rem;
 }
+
+.gridhome {
+    @extend.grid;
+    grid-template-rows: auto 115rem auto;
+
+}
+
+.gridpages {
+    @extend.grid;
+    grid-template-rows: auto 80rem auto;
+}
+
+
+
+
 
 header {
     grid-area: menu;
@@ -154,7 +167,7 @@ footer {
 
 .navbar-brand {
     color: $color-text-accent;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: $font-style;
     font-size: 3rem;
     border-top: solid rgb(255, 255, 255);
     margin-left: 1rem;
@@ -191,36 +204,23 @@ footer {
             animation-duration: 5s;
         }
 
-        &::after {
-            content: "";
-            display: block;
-            border-bottom: 2px solid $color-accent;
-            height: 0.5px;
-            animation-name: slidelink, fadein;
-            animation-duration: 5s;
-        }
     }
 
 }
 
-.target {
-    filter: invert($color-primary);
-    animation-duration: 1s;
-    animation-name: fadein;
-    animation-iteration-count: infinite;
-}
 
 
 /* Navegacion lateral*/
 
 .iconos {
-
     display: flex;
+    position: fixed;
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
     justify-content: space-between;
     margin-top: 7rem;
+    margin-left: 2%;
 
     & img {
         margin-top: 2rem;
@@ -238,6 +238,12 @@ footer {
     }
 }
 
+.target {
+    filter: invert($color-primary);
+    animation-duration: 1s;
+    animation-name: fadein;
+    animation-iteration-count: infinite;
+}
 
 /* homepage*/
 
@@ -260,7 +266,7 @@ footer {
 .hometext {
     padding: 2rem 1rem;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-style-second;
     font-size: 2.5rem;
     line-height: 2.5rem;
     margin-top: 2rem;
@@ -274,6 +280,33 @@ footer {
 
 }
 
+.container-fluid2 {
+    background-image: radial-gradient($color-gradient2-left, $color-gradient2-right);
+    width: auto;
+    padding: 3%;
+    margin: 1%;
+    border-radius: 5px;
+    font-family: $font-style-second;
+
+    & h2 {
+        color: $color-text-accent;
+    }
+
+    & p {
+        padding-top: 1%;
+        color: $color-text;
+        font-size: medium;
+    }
+
+    & div {
+        margin-top: 2%;
+        ;
+        color: $color-text-button;
+
+    }
+}
+
+
 
 /* acceso*/
 
@@ -286,68 +319,8 @@ footer {
 
 /* cobertura*/
 
-.container {
-    padding: 2%;
-    margin-top: 8%;
-    gap: 5rem 0rem;
-    ;
-    grid-template-areas:
-        "osde galeno swiss-medical"
-        "comercio poder-judicial sancor-salud"
-        "unión-personal medicus prevención-art";
-
-    &div {
-        border-radius: 0.5rem;
-        font-size: 1.9rem;
-        text-align: center;
-        background-image: linear-gradient(to right, $color-gradient-left, $color-gradient-right);
-        color: rgb(58, 77, 92);
-
-        & p {
-            margin-top: 3rem;
-            font-family: 'Kdam Thmor Pro', sans-serif;
-            font-weight: lighter;
-        }
-    }
-}
-
-
-
-.osde {
-    grid-area: osde;
-}
-
-.galeno {
-    grid-area: galeno;
-}
-
-.swiss-medical {
-    grid-area: swiss-medical;
-}
-
-.comercio {
-    grid-area: comercio;
-}
-
-.poder-judicial {
-    grid-area: poder-judicial;
-
-}
-
-.sancor-salud {
-    grid-area: sancor-salud;
-}
-
-.unión-personal {
-    grid-area: unión-personal;
-}
-
-.medicus {
-    grid-area: medicus;
-}
-
-.prevención-art {
-    grid-area: prevención-art;
+.acordioncontenedor {
+    margin: 5%;
 }
 
 /* about*/
@@ -355,7 +328,7 @@ footer {
 .aboutbox {
     padding: 4rem 2rem;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-style-second;
     font-size: 1.5rem;
     line-height: 3rem;
     color: $color-text;
@@ -389,7 +362,7 @@ footer {
     flex-direction: row;
     font-size: .8rem;
     margin-top: 10%;
-    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-family: $font-style;
     color: $color-text-accent;
 
 }
@@ -404,7 +377,7 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 1.2rem;
-    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-family: $font-style;
     font-size: 1.3rem;
 }
 
@@ -442,7 +415,7 @@ footer {
     background-color: rgb(255, 255, 255);
     border: 0rem;
     color: rgb(58, 77, 92);
-    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-family: $font-style;
 }
 
 /* footer*/
@@ -459,7 +432,7 @@ footer {
 
 .footerlista {
     list-style: none;
-    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-family: $font-style;
     font-size: 0.3rem;
     color: $color-text-accent;
 }
@@ -657,6 +630,9 @@ footer {
 
 @media (min-width: 1024px) {
 
+    .grid {
+        grid-template-columns: 7% auto 6%
+    }
 
     .iconos img {
         margin-top: 2rem;
@@ -670,7 +646,7 @@ footer {
     }
 
     .homeimagen {
-        height: 45rem;
+        height: 40rem;
         width: 35rem;
     }
 
@@ -681,6 +657,9 @@ footer {
         line-height: 6rem;
         padding: 5rem 8rem 0rem 0rem;
     }
+
+
+
 
     .accesobox {
         padding: 0rem;
@@ -803,15 +782,13 @@ footer {
     }
 
 
-    }
+}
 
-    .datosbox {
-        margin-bottom: -3rem;
-    }   
+.datosbox {
+    margin-bottom: -3rem;
+}
 
-    .formelement {
-        font-size: 1.6rem;
-        padding: 1.5rem;
-    }
-
-
+.formelement {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+}

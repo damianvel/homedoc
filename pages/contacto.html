@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Doc</title>
+    <meta name="keywords" content="doctor, salud, consulorio, medicina, telemedicina">
+    <meta name="description" content="Formulario de contacto HomeDoc, ponte en contacto con nosotros" />
+    <title>contacto HomeDoc</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +18,13 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="/css/estilos.css">
 </head>
 
 
 <body>
-    <div class="grid">
+    <div class="gridpages">
+
         <header>
             <nav class="navbar navbar-expand-md">
                 <div class="container-fluid">
@@ -34,18 +37,18 @@
                     <div class="collapse navbar-collapse hamburguesa" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" href="index.html">home</a>
+                                <a class="nav-link" href="/index.html">home</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="consultorio.html">acceso</a>
+                                <a class="nav-link" href="/pages/acceso.html">acceso</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="about.html">about</a>
+                                <a class="nav-link" href="/pages/about.html">about</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contacto.html">contact</a>
+                                <a class="nav-link active" href="/pages/contacto.html">contact</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -71,82 +74,80 @@
         <aside>
             <div class="iconos">
                 <div>
-                    <a href="index.html"><img src="img/1.png" alt="icono casa"></a>
+                    <a href="/index.html"><img src="/img/1.png" alt="icono casa"></a>
                 </div>
                 <div>
-                    <a href="consultorio.html"><img src="img/4.png" alt="icono acceso consultorio"></a>
+                    <a href="/pages/acceso.html"><img src="/img/4.png" alt="icono acceso consultorio"></a>
+                </div>
+                <div>
+                    <a href="/pages/about.html"><img src="/img/2.png" alt="icono informacion"></a>
+                </div>
+                <div><a href="/pages/coberturas.html"><img src="/img/3.png" alt="icono cobertura medica"></a>
                 </div>
                 <div class="target">
-                    <a href="about.html"><img src="img/2.png" alt="icono informacion"></a>
-                </div>
-                <div><a href="coberturas.html"><img src="img/3.png" alt="icono cobertura medica"></a>
-                </div>
-                <div>
-                    <a href="contacto.html"><img src="img/5.png" alt=" icono contacto"></a>
+                    <a href="/pages/contacto.html"><img src="/img/5.png" alt=" icono contacto"></a>
                 </div>
             </div>
         </aside>
 
-        <main class="aboutbox">
+        <main class="mainformulario">
+            <div class="contactobox">
 
-            <div class="aboutflex">
 
-                <div>
-                    <p class="abouttext">Somos una plataforma de telemedicina, apalancada en Inteligencia Artificial.
-                        Optimizamos tu tiempo y para que recibas la mejor atención médica desde la comodidad de tu
-                        hogar.
-                        Sin costos de suscripción, pagas solo las consultas que realizas.
-                        Diagnósticos inteligentes, clasificador de antecedentes y predicción de enfermedades
-                        son algunas de las herramientas que desarrollamos en HomeDoc para hacer más eficiente tu
-                        experiencia en
-                        nuestra plataforma.
-                    </p>
+                <div class="datosbox">
+
+                    <div class="dato">1126152615</div>
+                    <div class="dato">Av Libertador 135, 4A</div>
+                    <div class="dato">info@homedoc.com</div>
+
+
                 </div>
 
 
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/c1.jpg" class="d-block w-100" alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/c2.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/c3.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/c4.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">siguiente</span>
-                    </button>
+                <div>
+                    <form action="">
+                        <fieldset class="fieldset">
+                            <div class="formulario">
+                                <div class="formtitulo">
+                                    <legend>CONTACTO</legend>
+                                </div>
+                                <div class="formelement">
+                                    <label for="nombre">Nombre</label>
+                                    <input class="input" type="text" name="nombre" placeholder="" id="nombre" required>
+                                </div>
+                                <div class="formelement">
+                                    <label for="apellido">Apellido</label>
+                                    <input class="input" type="text" name="apellido" placeholder="" id="nombre"
+                                        required>
+                                </div>
+                                <div class="formelement">
+                                    <label for="telefono">Telefono</label>
+                                    <input class="input" type="text" id="clave" placeholder="" required>
+                                </div>
+                                <div class="formelement">
+                                    <label for="correo">Correo</label>
+                                    <input class="input" type="email" placeholder="" id="correo" required>
+                                </div>
+                                <div class="formelement">
+                                    <label for="cobertura">Cobertura</label>
+                                    <select class="input" name="cobertura" id="cobertura">
+                                        <option class="formdesplegar" value=""> ...</option>
+                                        <option value="osde"> osde</option>
+                                        <option value="sm"> swiss medical</option>
+                                        <option value="comercio"> empleados de comercio</option>
+                                        <option value="particular"> pago particular</option>
+                                    </select>
+                                </div>
+                                <div class="formelement">
+                                    <input class="enviar" type="submit" title="enviar">
+                                </div>
+                            </div>
+                        </fieldset>
                 </div>
             </div>
 
-
-
         </main>
         <section></section>
-
 
         <footer class="navbar navbar-expand">
             <div class="container-fluid">
@@ -174,8 +175,8 @@
 
         </footer>
 
-    </div>
 
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
