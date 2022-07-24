@@ -31,6 +31,12 @@ html {
     row-gap: 0.3rem;
 }
 
+.gridpages {
+    @extend.grid;
+    grid-template-rows: auto 80rem auto;
+}
+
+
 main {
     grid-area: principal;
 }
@@ -56,9 +62,5 @@ aside {
 
 /*all pages but home*/
 
-.gridpages {
-    @extend.grid;
-    grid-template-rows: auto 80rem auto;
-}
 
 

@@ -59,7 +59,9 @@ html {
 /*Layout*/
 .grid, .gridpages, .gridhome {
   display: grid;
-  grid-template-areas: "menu menu menu" "lateral principal secundario" "pie pie pie";
+  grid-template-areas: "menu menu menu"
+ "lateral principal secundario"
+ "pie pie pie";
   grid-template-columns: 8% auto 6%;
   column-gap: 0.2rem;
   row-gap: 0.3rem; }
