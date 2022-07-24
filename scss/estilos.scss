@@ -1,18 +1,23 @@
 @import "utilities/variables";
 
+@import "layout/general";
 
 @import "layout/header";
-@import "layout/general";
-@import "layout/lateralnav";
+
 @import "layout/footer";
 
+@import "layout/lateralnav";
+
 @import "views/home";
-@import "views/about";
 @import "views/acceso";
 @import "views/contacto";
 @import "views/coberturas";
 
+@import "views/about";
+
+
 @import "components/buttons";
 
 @import "utilities/efects";
+
 @import "utilities/medias";

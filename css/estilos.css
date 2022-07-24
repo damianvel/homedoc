@@ -1,4 +1,39 @@
-/*Header*/
+html {
+  font-size: 62.5%; }
+
+* {
+  margin: 0px;
+  padding: 0px; }
+
+* {
+  margin: 0px;
+  padding: 0px; }
+
+.grid, .gridpages, .gridhome {
+  display: grid;
+  grid-template-areas: "menu menu menu" "lateral principal secundario" "pie pie pie";
+  grid-template-columns: 8% auto 6%;
+  column-gap: 0.2rem;
+  row-gap: 0.3rem; }
+
+.gridpages {
+  grid-template-rows: auto 80rem auto; }
+
+main {
+  grid-area: principal; }
+
+section {
+  background-image: linear-gradient(to left, #bbceda, #cbeedb);
+  grid-area: secundario; }
+
+aside {
+  background-image: linear-gradient(to left, #bbceda, #cbeedb);
+  grid-area: lateral;
+  animation-name: fadein;
+  animation-duration: 3s; }
+  aside:hover {
+    background-image: linear-gradient(to left, #bbceda, #9ec9f3); }
+
 header {
   grid-area: menu;
   animation-duration: 7s;
@@ -44,48 +79,24 @@ header {
       animation-name: slidelink, fadein;
       animation-duration: 5s; }
 
-/*Preset*/
-html {
-  font-size: 62.5%; }
+footer {
+  grid-area: pie;
+  background-image: linear-gradient(#bbceda, #cbeedb); }
 
-* {
-  margin: 0px;
-  padding: 0px; }
+.footerflex {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 2rem; }
 
-* {
-  margin: 0px;
-  padding: 0px; }
+.footerlista {
+  list-style: none;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 0.3rem;
+  color: #004600; }
 
-/*Layout*/
-.grid, .gridpages, .gridhome {
-  display: grid;
-  grid-template-areas: "menu menu menu"
- "lateral principal secundario"
- "pie pie pie";
-  grid-template-columns: 8% auto 6%;
-  column-gap: 0.2rem;
-  row-gap: 0.3rem; }
-
-main {
-  grid-area: principal; }
-
-section {
-  background-image: linear-gradient(to left, #bbceda, #cbeedb);
-  grid-area: secundario; }
-
-aside {
-  background-image: linear-gradient(to left, #bbceda, #cbeedb);
-  grid-area: lateral;
-  animation-name: fadein;
-  animation-duration: 3s; }
-  aside:hover {
-    background-image: linear-gradient(to left, #bbceda, #9ec9f3); }
-
-/*all pages but home*/
-.gridpages {
-  grid-template-rows: auto 80rem auto; }
-
-/* Navegacion lateral*/
 .iconos {
   display: flex;
   position: fixed;
@@ -110,24 +121,6 @@ aside {
   animation-duration: 1s;
   animation-name: fadein;
   animation-iteration-count: infinite; }
-
-footer {
-  grid-area: pie;
-  background-image: linear-gradient(#bbceda, #cbeedb); }
-
-.footerflex {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  margin-top: 2rem; }
-
-.footerlista {
-  list-style: none;
-  font-family: "Chakra Petch", sans-serif;
-  font-size: 0.3rem;
-  color: #004600; }
 
 .gridhome {
   grid-template-rows: auto 135rem auto; }
@@ -175,21 +168,6 @@ footer {
   .container-fluid2 div {
     margin-top: 2%;
     color: #eefdf3; }
-
-.aboutbox {
-  padding: 4rem 2rem;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
-  line-height: 3rem;
-  color: #3d3d3d; }
-
-.abouttext {
-  animation-duration: 7s;
-  animation-name: fadein;
-  margin-bottom: 5rem; }
-  .abouttext:hover {
-    color: #004600; }
 
 .accesobox {
   padding: 10%;
@@ -256,6 +234,21 @@ footer {
 
 .acordioncontenedor {
   margin: 5%; }
+
+.aboutbox {
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  color: #3d3d3d; }
+
+.abouttext {
+  animation-duration: 7s;
+  animation-name: fadein;
+  margin-bottom: 5rem; }
+  .abouttext:hover {
+    color: #004600; }
 
 @keyframes colorefect {
   from {
