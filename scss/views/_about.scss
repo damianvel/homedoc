@@ -1,0 +1,19 @@
+.aboutbox {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: $font-style-second;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: $color-text;
+}
+
+.abouttext {
+    animation-duration: 7s;
+    animation-name: fadein;
+    margin-bottom: 5rem;
+
+    &:hover {
+        color: $color-text-accent;
+    }
+
+}

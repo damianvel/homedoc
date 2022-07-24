@@ -1,91 +1,10 @@
-html {
-  font-size: 62.5%; }
-
-* {
-  margin: 0px;
-  padding: 0px; }
-
-* {
-  margin: 0px;
-  padding: 0px; }
-
-/* Efectos*/
-@keyframes colorefect {
-  from {
-    filter: contrast(2); }
-  to {
-    background-image: linear-gradient(#bbceda, #cbeedb); } }
-
-@keyframes slidein {
-  from {
-    width: 10%; }
-  to {
-    width: 70%; } }
-
-@keyframes slidelink {
-  from {
-    width: 10%; }
-  to {
-    width: 100%; } }
-
-@keyframes slidetop {
-  from {
-    margin-bottom: -10%; }
-  to {
-    margin-bottom: 0%; } }
-
-@keyframes fadein {
-  from {
-    opacity: 50%; }
-  to {
-    opacity: 100%; } }
-
-@keyframes fadeout {
-  from {
-    opacity: 100%; }
-  to {
-    opacity: 50%; } }
-
-/* Layout*/
-.grid, .gridhome, .gridpages {
-  display: grid;
-  grid-template-areas: "menu menu menu" "lateral principal secundario" "pie pie pie";
-  grid-template-columns: 8% auto 6%;
-  column-gap: 0.2rem;
-  row-gap: 0.3rem; }
-
-.gridhome {
-  grid-template-rows: auto 115rem auto; }
-
-.gridpages {
-  grid-template-rows: auto 80rem auto; }
-
+/*Header*/
 header {
   grid-area: menu;
   animation-duration: 7s;
   animation-name: colorefect;
   animation-delay: -1s; }
 
-aside {
-  background-image: linear-gradient(to left, #bbceda, #cbeedb);
-  grid-area: lateral;
-  animation-name: fadein;
-  animation-duration: 3s; }
-  aside:hover {
-    background-image: linear-gradient(to left, #bbceda, #9ec9f3); }
-
-main {
-  grid-area: principal; }
-
-section {
-  background-image: linear-gradient(to left, #bbceda, #cbeedb);
-  grid-area: secundario; }
-
-footer {
-  grid-area: pie;
-  background-image: linear-gradient(#bbceda, #cbeedb); }
-
-/* Navegacion (Bootstrap)*/
 .navbar {
   background-image: linear-gradient(#bbceda, #cbeedb);
   padding-left: 5%;
@@ -125,6 +44,45 @@ footer {
       animation-name: slidelink, fadein;
       animation-duration: 5s; }
 
+/*Preset*/
+html {
+  font-size: 62.5%; }
+
+* {
+  margin: 0px;
+  padding: 0px; }
+
+* {
+  margin: 0px;
+  padding: 0px; }
+
+/*Layout*/
+.grid, .gridpages, .gridhome {
+  display: grid;
+  grid-template-areas: "menu menu menu" "lateral principal secundario" "pie pie pie";
+  grid-template-columns: 8% auto 6%;
+  column-gap: 0.2rem;
+  row-gap: 0.3rem; }
+
+main {
+  grid-area: principal; }
+
+section {
+  background-image: linear-gradient(to left, #bbceda, #cbeedb);
+  grid-area: secundario; }
+
+aside {
+  background-image: linear-gradient(to left, #bbceda, #cbeedb);
+  grid-area: lateral;
+  animation-name: fadein;
+  animation-duration: 3s; }
+  aside:hover {
+    background-image: linear-gradient(to left, #bbceda, #9ec9f3); }
+
+/*all pages but home*/
+.gridpages {
+  grid-template-rows: auto 80rem auto; }
+
 /* Navegacion lateral*/
 .iconos {
   display: flex;
@@ -151,7 +109,27 @@ footer {
   animation-name: fadein;
   animation-iteration-count: infinite; }
 
-/* homepage*/
+footer {
+  grid-area: pie;
+  background-image: linear-gradient(#bbceda, #cbeedb); }
+
+.footerflex {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 2rem; }
+
+.footerlista {
+  list-style: none;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 0.3rem;
+  color: #004600; }
+
+.gridhome {
+  grid-template-rows: auto 135rem auto; }
+
 .homebox {
   display: flex;
   flex-direction: column;
@@ -196,17 +174,6 @@ footer {
     margin-top: 2%;
     color: #eefdf3; }
 
-/* acceso*/
-.accesobox {
-  padding: 10%;
-  height: 100%;
-  width: 100%; }
-
-/* cobertura*/
-.acordioncontenedor {
-  margin: 5%; }
-
-/* about*/
 .aboutbox {
   padding: 4rem 2rem;
   text-align: center;
@@ -222,7 +189,11 @@ footer {
   .abouttext:hover {
     color: #004600; }
 
-/* contacto*/
+.accesobox {
+  padding: 10%;
+  height: 100%;
+  width: 100%; }
+
 .contactobox {
   display: flex;
   flex-direction: column;
@@ -281,20 +252,44 @@ footer {
   color: #3a4d5c;
   font-family: "Chakra Petch", sans-serif; }
 
-/* footer*/
-.footerflex {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  margin-top: 2rem; }
+.acordioncontenedor {
+  margin: 5%; }
 
-.footerlista {
-  list-style: none;
-  font-family: "Chakra Petch", sans-serif;
-  font-size: 0.3rem;
-  color: #004600; }
+@keyframes colorefect {
+  from {
+    filter: contrast(2); }
+  to {
+    background-image: linear-gradient(#bbceda, #cbeedb); } }
+
+@keyframes slidein {
+  from {
+    width: 10%; }
+  to {
+    width: 70%; } }
+
+@keyframes slidelink {
+  from {
+    width: 10%; }
+  to {
+    width: 100%; } }
+
+@keyframes slidetop {
+  from {
+    margin-bottom: -10%; }
+  to {
+    margin-bottom: 0%; } }
+
+@keyframes fadein {
+  from {
+    opacity: 50%; }
+  to {
+    opacity: 100%; } }
+
+@keyframes fadeout {
+  from {
+    opacity: 100%; }
+  to {
+    opacity: 50%; } }
 
 @media (min-width: 480px) {
   .hometext {
@@ -404,7 +399,7 @@ footer {
     width: 110%; } }
 
 @media (min-width: 1024px) {
-  .grid, .gridhome, .gridpages {
+  .grid, .gridpages, .gridhome {
     grid-template-columns: 7% auto 6%; }
   .iconos img {
     margin-top: 2rem;

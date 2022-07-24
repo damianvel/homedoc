@@ -1,0 +1,64 @@
+
+/*Preset*/
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*Layout*/
+
+
+.grid {
+    display: grid;
+    grid-template-areas:
+        "menu menu menu"
+        "lateral principal secundario"
+        "pie pie pie";
+
+    grid-template-columns: 8% auto 6%;
+    column-gap: 0.2rem;
+    row-gap: 0.3rem;
+}
+
+main {
+    grid-area: principal;
+}
+
+section {
+    background-image: linear-gradient(to left, $color-gradient-left, $color-gradient-right);
+    grid-area: secundario;
+}
+
+aside {
+    background-image: linear-gradient(to left, $color-gradient-left, $color-gradient-right);
+    grid-area: lateral;
+    animation-name: fadein;
+    animation-duration: 3s;
+
+    &:hover {
+
+        background-image: linear-gradient(to left, $color-gradient-left, $color-gradient-accent);
+    }
+}
+
+
+
+/*all pages but home*/
+
+.gridpages {
+    @extend.grid;
+    grid-template-rows: auto 80rem auto;
+}
+
+

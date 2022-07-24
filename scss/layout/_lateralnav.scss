@@ -1,0 +1,35 @@
+
+/* Navegacion lateral*/
+
+.iconos {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 7rem;
+    margin-left: 2%;
+
+    & img {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+        height: 2rem;
+        width: 2rem;
+
+
+        &:hover {
+            filter: invert(100);
+            margin-left: 1rem;
+            padding: 3%;
+
+        }
+    }
+}
+
+.target {
+    filter: invert($color-primary);
+    animation-duration: 1s;
+    animation-name: fadein;
+    animation-iteration-count: infinite;
+}

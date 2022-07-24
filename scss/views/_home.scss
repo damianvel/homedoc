@@ -1,0 +1,67 @@
+.gridhome {
+    @extend.grid;
+    grid-template-rows: auto 135rem auto;
+
+}
+
+
+.homebox {
+
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.homeimagen {
+    height: 25rem;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    animation-duration: 5s;
+    animation-name: fadein;
+    animation-iteration-count: infinite;
+}
+
+.hometext {
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: $font-style-second;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-top: 2rem;
+    color: $color-text;
+    animation-duration: 7s;
+    animation-name: fadein;
+
+    &:hover {
+        color: $color-text-accent;
+    }
+
+}
+
+.container-fluid2 {
+    background-image: radial-gradient($color-gradient2-left, $color-gradient2-right);
+    width: auto;
+    padding: 3%;
+    margin: 1%;
+    border-radius: 5px;
+    font-family: $font-style-second;
+
+    & h2 {
+        color: $color-text-accent;
+    }
+
+    & p {
+        padding-top: 1%;
+        color: $color-text;
+        font-size: medium;
+    }
+
+    & div {
+        margin-top: 2%;
+        ;
+        color: $color-text-button;
+
+    }
+}

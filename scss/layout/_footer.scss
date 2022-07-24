@@ -1,0 +1,22 @@
+footer {
+    grid-area: pie;
+    background-image: linear-gradient($color-gradient-left, $color-gradient-right);
+    ;
+}
+
+
+.footerflex {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.footerlista {
+    list-style: none;
+    font-family: $font-style;
+    font-size: 0.3rem;
+    color: $color-text-accent;
+}

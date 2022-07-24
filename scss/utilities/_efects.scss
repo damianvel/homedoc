@@ -1,0 +1,66 @@
+
+@keyframes colorefect {
+    from {
+        filter: contrast(2);
+
+
+    }
+
+    to {
+        background-image: linear-gradient($color-gradient-left, $color-gradient-right);
+
+    }
+}
+
+
+@keyframes slidein {
+    from {
+        width: 10%
+    }
+
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes slidelink {
+    from {
+        width: 10%
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes slidetop {
+    from {
+        margin-bottom: -10%;
+
+    }
+
+    to {
+        margin-bottom: 0%;
+    }
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 50%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 50%;
+    }
+}
