@@ -11,9 +11,12 @@
     animation-duration: 7s;
     animation-name: fadein;
     margin-bottom: 5rem;
+    margin-top: 2%;
 
     &:hover {
         color: $color-text-accent;
     }
 
 }
+
+.hgabout{margin-bottom: 3%;}

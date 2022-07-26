@@ -1,5 +1,25 @@
+.hgacceso{margin-top: 4%;
+    margin-bottom: 3%}
+
+
 .accesobox {
     padding: 10%;
     height: 100%;
     width: 100%;
 }
+
+
+.gridacceso {
+    display: grid;
+    grid-template-areas:
+        "menu menu menu"
+        "lateral titulo secundario"
+        "lateral principal secundario"
+        "pie pie pie";
+    grid-template-rows: auto 5rem  80rem auto;
+    grid-template-columns: 8% auto 6%;
+    column-gap: 0.2rem;
+    row-gap: 0.3rem;
+}
+
+

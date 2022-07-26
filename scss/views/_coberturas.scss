@@ -1,3 +1,9 @@
-.acordioncontenedor {
-    margin: 5%;
+.gridcob {
+    @extend.grid;
+    grid-template-rows: auto 95rem auto;
 }
+
+.contcoberturas {
+    padding: 5%;
+}
+

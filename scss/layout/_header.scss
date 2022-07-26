@@ -5,7 +5,6 @@ header {
     animation-delay: -1s;
 }
 
-
 .navbar {
     background-image: linear-gradient($color-gradient-left, $color-gradient-right);
     padding-left: 5%;
@@ -27,19 +26,6 @@ header {
     width: 70%;
 
 }
-
-.justfirs {
-    animation-duration: 6s;
-    animation-name: slidein;
-}
-
-.navhome {
-    font-size: 2rem;
-    animation-duration: 7s;
-    animation-name: slidetop;
-    animation-delay: -2s;
-}
-
 
 .nav-link {
     margin-left: 2rem;
