@@ -1,3 +1,8 @@
+.gridabout{
+    @extend.gridpages
+}
+
+
 .aboutbox {
     padding: 4rem 2rem;
     text-align: center;
@@ -7,7 +12,7 @@
     color: $color-text;
 }
 
-.abouttext {
+@mixin abouttext {
     animation-duration: 7s;
     animation-name: fadein;
     margin-bottom: 5rem;
@@ -18,5 +23,7 @@
     }
 
 }
+
+
 
 .hgabout{margin-bottom: 3%;}

@@ -23,7 +23,8 @@
 }
 
 .formulario {
-    margin-top: 5%;
+    width: 100%;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     padding: 1.2rem;
@@ -38,6 +39,7 @@
 
 
 .formelement {
+    margin-top: 1.5rem;
     padding: 0.8rem;
     right: 0%;
     font-size: 1.5rem;
@@ -54,3 +56,11 @@
     text-align: right;
 }
 
+.enviar {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: 0rem;
+    color: rgb(58, 77, 92);
+    font-family: $font-style;
+}

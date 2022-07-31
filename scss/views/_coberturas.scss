@@ -1,9 +1,31 @@
 .gridcob {
     @extend.grid;
-    grid-template-rows: auto 95rem auto;
+    grid-template-rows: auto 105rem auto;
 }
 
 .contcoberturas {
     padding: 5%;
 }
 
+.accordion-button{font-size: medium;}
+
+$coberturas: (
+    "osde": #5abb4b,
+    "comercio": #8eacca,
+    "swiss": #c95bd7,
+    "particulares": #c6aac9,
+    "medicus": #6c465e,
+    "galeno": #d4d498,
+    "ospan": #bcccd1,
+    "prevension": #ee653b,
+    "judicial": #89b4a7,
+
+
+);
+
+@each $name,
+$value in $coberturas {
+    .bg-#{$name} {
+        background-color: $value;
+    }
+}

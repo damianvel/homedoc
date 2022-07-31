@@ -1,4 +1,5 @@
 footer {
+    padding: 3%;
     grid-area: pie;
     background-image: linear-gradient($color-gradient-left, $color-gradient-right);
     ;
@@ -14,9 +15,17 @@ footer {
     margin-top: 2rem;
 }
 
-.footerlista {
-    list-style: none;
+.footerlista {text-align: center;
+line-height: 2rem;
     font-family: $font-style;
-    font-size: 0.3rem;
+    font-size: 2rem;
     color: $color-text-accent;
+    margin-bottom: 2rem;
 }
+
+.list-group-item{margin-top: 2rem;}
+
+.firstintem {font-weight: bold;}
+
+.nodecoration {list-style: none;
+    text-decoration: none;}
