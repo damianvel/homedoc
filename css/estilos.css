@@ -118,7 +118,8 @@ footer {
 
 .nodecoration {
   list-style: none;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #004600; }
 
 .iconos {
   position: fixed;
