@@ -2,7 +2,6 @@
     @extend.gridpages
 }
 
-
 .aboutbox {
     padding: 4rem 2rem;
     text-align: center;
@@ -15,7 +14,6 @@
 @mixin abouttext {
     animation-duration: 7s;
     animation-name: fadein;
-    margin-bottom: 5rem;
     margin-top: 2%;
 
     &:hover {
@@ -23,7 +21,5 @@
     }
 
 }
-
-
 
 .hgabout{margin-bottom: 3%;}
